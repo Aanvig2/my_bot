@@ -1,6 +1,8 @@
 import sqlite3
 from datetime import datetime, timedelta
+import os
 
+os.makedirs("/data", exist_ok=True)
 conn = sqlite3.connect("/data/bot.db", check_same_thread=False)
 cursor = conn.cursor()
 
